@@ -96,7 +96,7 @@ namespace student
                 else
                 {
                     connection.Open();
-                    string task = $"UPDATE labattendance SET {editedColumn} = {editedText} WHERE subjects= '{subOrLab}'";
+                    string task = $"UPDATE subattendance SET {editedColumn} = {editedText} WHERE subjects= '{subOrLab}'";
                     MySqlCommand command = new MySqlCommand(task, connection);
                     command.ExecuteNonQuery();
                     connection.Close();
