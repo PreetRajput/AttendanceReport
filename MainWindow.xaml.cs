@@ -35,11 +35,19 @@ namespace student
         
         public MainWindow()
         {
+            if (day!= "Sunday")
+            {
+                
             InitializeComponent();
             today.Text= $" {DateTime.Now.ToString("dd-MM-yyyy")}     {DateTime.Now.DayOfWeek.ToString()}";
             subAndLabDisplay();
             subAttendDisplay();
             labAttendDisplay();
+            }
+            else
+            {
+                MessageBox.Show("Today is Sunday No changes can be done ");
+            }
         }
         private void analysisWindow(object sender, EventArgs e)
         {
